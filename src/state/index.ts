@@ -1,5 +1,7 @@
 import { isProduction } from '@/configs';
 import { ThunkAction, ThunkDispatch, configureStore } from '@reduxjs/toolkit';
+import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
+
 import logger from 'redux-logger';
 
 import reducers from './reducer';
@@ -27,5 +29,9 @@ export type AppThunk<ReturnType = void> = ThunkAction<
   any
 >;
 export type AppThunkDispatch = ThunkDispatch<RootState, unknown, any>;
+export const useAppDispatch = () => useDispatch<typeof store.dispatch>();
+export const useAppSelector: TypedUseSelectorHook<
+  ReturnType<typeof store.getState>
+> = useSelector;
 
 export default store;
