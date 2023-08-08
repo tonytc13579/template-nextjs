@@ -1,11 +1,10 @@
 import PrimaryLayout from '@/components/layout/main/PrimaryLayout';
 import SidebarLayout from '@/components/sidebar_/SidebarLayout';
-import styles from './Home.module.scss';
-import { NextPageWithLayout } from './page';
+import styles from '../styles/Home.module.css';
+import { NextPageWithLayout } from '../page';
 import { useEffect } from 'react';
 
 const Home: NextPageWithLayout = () => {
-  console.log('[Home] RENDER ');
   useEffect(() => {
     console.log('[Screen Home] [useEffect] render');
   }, []);

@@ -1,22 +1,48 @@
 {
-  "name": "template",
+  "name": "your_app_name",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT",
+  "homepage": "YOUR_GIT_REPO_URL",
+  "engines": {
+    "node": ">=16.0.0",
+    "yarn": ">=1.22.0",
+    "npm": "please-use-yarn"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prettier": "prettier --write .",
+    "prepare": "husky install"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.9.5",
+    "@types/lodash": "^4.14.196",
     "@types/node": "20.4.8",
     "@types/react": "18.2.19",
     "@types/react-dom": "18.2.7",
+    "@types/redux-logger": "^3.0.9",
+    "axios": "^1.4.0",
+    "copy-to-clipboard": "^3.3.3",
     "eslint": "8.46.0",
     "eslint-config-next": "13.4.13",
+    "lodash": "^4.17.21",
     "next": "13.4.13",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-hot-toast": "^2.4.1",
+    "react-loading-skeleton": "^3.3.1",
+    "react-redux": "^8.1.2",
+    "redux": "^4.2.1",
+    "redux-logger": "^3.0.6",
+    "sass": "^1.64.2",
+    "scss": "^0.2.4",
     "typescript": "5.1.6"
+  },
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "prettier": "^3.0.1"
   }
 }
